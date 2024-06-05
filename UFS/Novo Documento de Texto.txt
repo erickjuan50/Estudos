@@ -1,0 +1,46 @@
+type Resultado = (Int,String)
+
+
+
+
+notaAluno :: Float -> Float -> Float -> Resultado
+notaAluno n1 n2 n3
+    |media n1 n2 n3 < 3 = (truncate(media n1 n2 n3),"Reprovado")
+    |media n1 n2 n3 >= 3 && media n1 n2 n3 < 7 = (truncate(media n1 n2 n3),"Prova de Final")
+    |media n1 n2 n3 > 7 = (truncate(media n1 n2 n3),"Aprovado")
+ where
+    media n1 n2 n3 = (n1+n2+n3)/3.0
+
+-- Seja o cadastro de pessoas dado por uma lista e exemplo de:
+type Cliente = (String, Int, Float, Char)
+type Cadastro = [Cliente]
+cadastro :: [Cliente]
+cadastro = [("Rosa", 27, 1.66,'F'),("Joao", 26, 1.85,'M'),("Maria", 67, 1.55,'F')]
+-- Recebe a lista cadastro e retorna o número de pessoas do sexo masculino com idade superior a 25 anos.
+mMaior :: Cadastro -> Int
+mMaior xs = length [a | (a, b, c, d) <- xs, b >= 25 && d == 'M'] 
+
+
+
+
+
+
+
+
+everyThird [] = 0
+everyThird [_] = 0
+everyThird [_,_] = 0
+everyThird (x:y:z:xs) = z
+
+
+teste :: (Int, (Int,Int)) -> Int
+teste (1, (f,g)) = f + g
+teste (2, (f,g)) = f - g
+teste (3, (f,g)) = f * g
+teste _ = 0
+
+
+teste2 :: [a] -> String
+teste2 a
+    |mod (length a) 2 == 0 = "Quantidade de elementos da lista: Par"
+    |otherwise = "Quantidade de elementos da lista: Impar"

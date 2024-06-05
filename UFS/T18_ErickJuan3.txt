@@ -1,0 +1,25 @@
+Atividade n. 03
+Data: 21/05/2021
+Aluno: Erick Juan Gois Oliveira
+Turma: T18
+Curso: Sistemas de Informação
+Respostas:
+
+#1)
+lista = input("Insira os valores:")
+retorno = []
+erick = 0
+
+for x in lista.split():
+    retorno.append(int(x))
+for y in retorno:
+    erick = erick + y
+print(erick)
+
+#2)
+z = []
+for erick in range(2,20):
+    for juan in range (2,4):
+        if erick % juan == 0:
+            z.append(erick)
+print(z)

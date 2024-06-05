@@ -1,0 +1,53 @@
+Atividade n. 06
+Data: 09/06/2021
+Aluno: Erick Juan Gois Oliveira
+Turma: T18
+Curso: Sistemas de Informação
+Respostas:
+
+# Questão 1
+
+
+from random import randint
+
+eriju = {}
+erick = []
+stringinicial = 'jose maria pedro paulo vitor ana isabel saulo ivan rosa'
+juan = stringinicial.split(' ')
+
+for x in range(10):
+    erick.append(randint(20, 70))
+    eriju[juan[x]] = erick[x]
+
+print(erick)
+print(juan)
+print(eriju)
+
+'''[53, 62, 43, 37, 26, 58, 30, 40, 37, 33]
+['jose', 'maria', 'pedro', 'paulo', 'vitor', 'ana', 'isabel', 'saulo', 'ivan', 'rosa']
+{'jose': 53, 'maria': 62, 'pedro': 43, 'paulo': 37, 'vitor': 26, 'ana': 58, 'isabel': 30, 'saulo': 40, 'ivan': 37, 'rosa': 33}'''
+
+
+
+# Questão 2
+
+from random import randint
+
+eriju = {}
+erick = []
+juan = []
+n = int(input("Insira a quantidade de elementos do dicionário:"))
+
+for x in range(n):
+    erick.append(randint(10, 80))
+    juan.append(randint(50, 200))
+    eriju[erick[x]] = juan[x]
+
+print(erick)
+print(juan)
+print(eriju)
+
+'''Insira a quantidade de elementos do dicionário:10
+[31, 71, 25, 39, 30, 80, 24, 13, 22, 23]
+[161, 74, 134, 189, 119, 73, 74, 89, 170, 59]
+{31: 161, 71: 74, 25: 134, 39: 189, 30: 119, 80: 73, 24: 74, 13: 89, 22: 170, 23: 59}'''

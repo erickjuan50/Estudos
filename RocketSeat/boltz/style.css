@@ -1,0 +1,37 @@
+body{
+    background-color:#1e1e1e;
+}
+header{
+    background-color: rgb(83, 12, 150);
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+nav{
+    background-color: rgb(21, 12, 29);
+    padding: 10px 0;
+    text-align: center;
+
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    margin: 0px 40px;
+}
+main{
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+footer{
+    padding: 10px 0px;
+    color: wheat;
+    background-color: rgb(83, 12, 150);
+    font-family: sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
