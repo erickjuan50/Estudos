@@ -1,0 +1,41 @@
+*{ /*Para resetar os margins, padd e box sizing*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --ff-mainFont:'Epilogue', sans-serif;
+  --hue:250;
+  --bg-color: hsla(var(--hue), 22%, 20%);
+  --fc-primary: hsla(var(--hue),0%,100%);
+  --fc-secundary: hsla(var(--hue), 50%, 80%);
+  --fs-body: 1.6rem;
+  --fs-header: 4.0rem;
+
+  font-size: 62.5%;
+}
+body{
+  background-color: var(--bg-color);
+  font-family: var(--ff-mainFont);  
+  color: var(--fc-primary);
+  font-size: var(--fs-body);
+}
+header{
+  text-align: center; /*Lembrar de usar 
+                       textalign para textos*/
+  margin: 10rem 0 8.0rem;
+}
+header p{
+  color: var(--fc-secundary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
+  line-height: 3.2rem;
+
+  margin-bottom: 1.7rem;
+}
+header h1{
+  font-size: var(--fs-header);
+  line-height: 4.8rem;
+  font-weight: 800px;
+}
