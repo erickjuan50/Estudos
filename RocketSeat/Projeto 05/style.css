@@ -9,8 +9,12 @@
   --bg-color: hsla(var(--hue), 22%, 20%);
   --fc-primary: hsla(var(--hue),0%,100%);
   --fc-secundary: hsla(var(--hue), 50%, 80%);
+  --fc-dark: hsla(var(--hue), 100%, 11%, 1);
+
   --fs-body: 1.6rem;
-  --fs-header: 4.0rem;
+  --fs-header: clamp(4rem, 1rem + 5vw, 5.6rem); 
+/*                    Min,    Ideal,     Max*/
+  --fs-header-sm: clamp(3rem, 0.5rem + 4vw, 3rem);
 
   font-size: 62.5%;
 }
@@ -20,10 +24,46 @@ body{
   color: var(--fc-primary);
   font-size: var(--fs-body);
 }
+.page{
+  max-width: 33rem;
+  margin: 0 auto; /*Centralizar a page*/
+}
+@media (min-width: 700px) { /*Versão Desktop*/
+  
+  .page{
+    max-width: clamp(33rem, 30rem + 60vw, 117rem);
+    padding: 0 5rem 8rem;
+  }
+  main{
+    display: grid;
+    grid-template-areas: "A B B B B B" "C C C C C D";
+  }
+  main div:nth-child(1){
+    grid-area: A;
+  }
+  main div:nth-child(2){
+    grid-area: B;
+  }
+  main div:nth-child(3){
+    grid-area: C;
+  }
+  main div:nth-child(4){
+    grid-area: D;
+  }
+
+}
+img{
+  width: 100%; /*Faz a imagem não dar Overflow*/
+  height: auto;
+}
 header{
-  text-align: center; /*Lembrar de usar 
-                       textalign para textos*/
+  text-align: center; 
+  /*Lembrar de usar textalign para textos*/
   margin: 10rem 0 8.0rem;
+
+  animation-name: topdown;
+  animation-duration: 700ms;
+  animation-timing-function: ease;
 }
 header p{
   color: var(--fc-secundary);
@@ -38,4 +78,90 @@ header h1{
   font-size: var(--fs-header);
   line-height: 4.8rem;
   font-weight: 800px;
+}
+main{
+  display: grid;
+  gap: 3.2rem;
+
+  animation-name: downtop;
+  animation-duration: 700ms;
+  animation-delay: 400ms;
+  animation-fill-mode: backwards;
+}
+.card{
+  position: relative; /*Tudo dentro da div card
+                      fica relativo a ele*/
+  font-family: var(--fs-header);
+}
+.card img{
+  height: 41.6rem;
+  object-fit: cover; /*Ajusta a imagem pra 
+                respeitar os limites da caixa img*/
+  border-radius: 6px;
+
+  transition: all 300ms;
+  
+  filter:saturate(1.2)
+}
+.card img:hover{
+  transform: scale(1.1);
+  background-color: var(--fc-secundary);
+  padding: 2px;
+  filter: blur(0.8px) brightness(0.8);
+
+}
+.card h2{
+  position: absolute; /*Por cima de tudo*/
+  bottom: 5.1rem;
+  left: 2.8rem;
+
+  font-weight: 800;
+  font-size: var(--fs-header-sm);
+  line-height: 3.8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+.card h2 span {
+  border-radius: 2rem;
+  background-color: var(--fc-primary);
+  padding: 0 1.6rem;
+  height: 3.8rem;
+  width: fit-content; /*Encaixar no conteudo*/
+
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--fc-dark);
+
+  display: inline-flex;
+  align-items: center;
+}
+@keyframes topdown {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+    font-size: 100%;
+  }
+
+  50%{
+    font-size: 250%;
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+    font-size: 100%;
+  }
+}
+@keyframes downtop {
+  0%{
+    transform: translateY(700px);
+
+  }
+
+  100%{
+    transform: translateY(0);
+
+  }
 }
