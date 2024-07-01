@@ -92,6 +92,13 @@ main{
   position: relative; /*Tudo dentro da div card
                       fica relativo a ele*/
   font-family: var(--fs-header);
+
+  border-radius: 6px;
+  
+  transition: all 300ms;
+}
+.card:hover{
+  transform: scale(1.08);
 }
 .card img{
   height: 41.6rem;
@@ -99,15 +106,12 @@ main{
                 respeitar os limites da caixa img*/
   border-radius: 6px;
 
-  transition: all 300ms;
-  
+
   filter:saturate(1.2)
 }
 .card img:hover{
-  transform: scale(1.1);
-  background-color: var(--fc-secundary);
-  padding: 2px;
-  filter: blur(0.8px) brightness(0.8);
+  border: 2px solid var(--fc-secundary);
+  filter: brightness(0.8);
 
 }
 .card h2{
