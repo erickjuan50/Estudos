@@ -1,126 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
+
 <body>
+
   <div id="page">
-  <header>
+    <header>
       <h1>
-        Crie e compartilhe <br>
-        seu evento.
+        Matricule-se no programa PSG!
       </h1>
       <p>
         O primeiro passo, é preencher esse <br>
         formulário de inscrição.
       </p>
-  </header>
+    </header>
 
-  <main>
-    <form id="form">
-    <fieldset>
-      <div class="fieldset-wrapper">
-      <legend>Informações do Evento</legend>
-      <div class="input-wrapper">
-        <label for="titulo">
-          Título do evento <span>(mínimo 8 caracteres)</span>
-        </label>
-        <input type="text" name="titulo" id="titulo"
-        minlength="8">
-      </div>
-      <div class="input-wrapper">
-        <label for="link">
-          Link do evento <span>(comece com https://)</span>
-        </label>
-        <input type="url" name="link" id="link">
-      </div>
-      <div class="input-wrapper">
-        <label for="wpp">
-          Whatsapp para contato <span>(somente números)</span>
-        </label>
-        <input type="number" name="wpp" id="wpp" >
-      </div>
-      <div class="input-wrapper">
-        <label for="extraInfo">
-          Informações extras
-        </label>
-        <textarea name="extraInfo" id="extraInfo"></textarea>
-      </div>
-      <div class="input-wrapper">
-        <label for="select">
-          Informações extras
-        </label>
-        <select name="select" id="select">
-          <option value="wedding">Casamento</option>
-          <option value="birthday">Aniversário</option>
-          <option value="lecture">Palestra</option>
-          <option value="studentEvent">Evento estudantil</option>
-        </select>
-      </div>
-    </div>
-    </fieldset>
-    <fieldset>
-      <div class="fieldset-wrapper">
-        <legend>Privacidade</legend>
-        <div class="input-wrapper">
-          <label for="email">
-            E-mail do administrador <span>(digite um email válido)</span>
-          </label>
-          <input type="email" name="email" id="email" >
-        </div>
-        <div class="input-wrapper">
-          <label for="senha">
-            Senha de acesso para os participantes
-            <span>(mínimo 8 caracteres)</span>
-          </label>
-          <input type="password" name="senha" id="senha" 
-          minlength="8" >
-        </div>
-        <div class="checkbox-wrapper">
-          
-          <input type="checkbox" name="privateCheckbox" id="privateCheckbox">
-          
-          <label for="privateCheckbox">
-            Evento privado
-          </label>
-        </div>
-      </div>
-      
-    </fieldset>
-    <fieldset>
-      <div class="fieldset-wrapper">
-        <legend>
-          Dia e Hora
-        </legend>
-        <div class="input-data">
-          <div class="input-wrapper">
-            <label for="data">Data</label>
-            <input type="date" name="data" id="data">
+    <main>
+      <form id="form" action="/login-feiopodre">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Identificação e contato</legend>
+
+            <div class="input-wrapper"> <!--Dados pessoais-->
+              <label for="name">Nome Completo</label>
+              <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="">CPF <span>(Digite apenas números)</span></label>
+              <input type="text" name="cpf" id="cpf" maxlength="14" minlength="14" onkeyup="formatarCPF(this)" required>
+            </div>
+            <div class="input-wrapper-flex">
+              <div class="input-wrapper">
+                <label for="">RG <span>(Digite apenas números)</span></label>
+                <input type="text" name="rg" id="rg" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="date">Data de nascimento</span></label>
+                <input type="date" name="date" id="date" required>
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="cellPhone">Celular</label>
+              <input type="text" name="cellPhone" id="cellPhone" required>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="mail">E-mail</label>
+              <input type="email" name="mail" id="mail" required>
+            </div>
+
           </div>
-          <div class="input-wrapper">
-            <label for="horaI">Das</label>
-            <input type="time" name="horaI" id="horaI">
+        </fieldset>
+
+        <fieldset>
+
+          <div class="fieldset-wrapper">
+            <legend>Endereço</legend>
+
+            <div class="input-address-1">
+              <div class="input-wrapper">
+                <label for="add-cep">
+                  CEP
+                </label>
+                <input type="text" name="add-cep" id="add-cep" onkeyup="formatarCEP(this)">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="add-uf">
+                  UF
+                </label>
+                <input type="text" name="add-uf" id="add-uf" maxlength="2">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="add-city">
+                  Cidade
+                </label>
+                <input type="text" name="add-city" id="add-city">
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="add-neighborhood">
+                Bairro
+              </label>
+              <input type="text" name="add-neighborhood" id="add-neighborhood">
+            </div>
+
+            <div class="input-address-2">
+
+              <div class="input-wrapper">
+                <label for="add-address">
+                  Logradouro
+                </label>
+                <input type="text" name="add-address" id="add-address">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="add-number">
+                  Número
+                </label>
+                <input type="text" name="add-number" id="add-number">
+              </div>
+
+            </div>
+
+            <div class="input-wrapper">
+              <label for="add-complement">
+                Complemento
+              </label>
+              <input type="text" name="add-complement" id="add-complement">
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>
+              Dados sensíveis
+            </legend>
+
+            <div class="input-sensitive">
+              <div class="input-wrapper">
+                <label for="civilStatus">
+                  Estado Civil
+                </label>
+                <select name="civilStatus" id="civilStatus" required>
+                  <option select disable value="">Selecione o estado civil</option>
+                  <option value="SO">Solteiro(a)</option>
+                  <option value="CA">Casado(a)</option>
+                  <option value="SE">Separado(a)</option>
+                  <option value="UE">União Estável</option>
+                  <option value="DI">Divorciado(a)</option>
+                  <option value="VI">Viúvo(a)</option>
+                </select>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="etnia">Etnia</label>
+                <select name="etnia" id="etnia" required>
+                  <option select disable value="">Selecione sua etnia</option>
+                  <option value="BRA">Branca</option>
+                  <option value="PRE">Preta</option>
+                  <option value="PAR">Parda</option>
+                  <option value="AMA">Amarela</option>
+                  <option value="IND">Indígena</option>
+                  <option value="SD">Sem declaração</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-sensitive">
+              <div class="input-wrapper">
+                <label for="escolaridade">
+                  Nível de escolaridade
+                </label>
+                <select name="escolaridade" id="escolaridade" required>
+                  <option select disable value="">Selecione sua escolaridade</option>
+                  <option value="FI">Ensino Fundamental Incompleto</option>
+                  <option value="FC">Ensino Fundamental completo</option>
+                  <option value="MI">Ensino Médio Incompleto</option>
+                  <option value="MC">Ensino Médio completo</option>
+                  <option value="TI">Técnico Incompleto</option>
+                  <option value="TC">Técnico Completo</option>
+                  <option value="SI">Ensino Superior Incompleto</option>
+                  <option value="SC">Ensino Superior completo</option>
+                  <option value="PO">Pós-graduação</option>
+                </select>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="ensino-basico">Você cursou o Ensino Básico em:</label>
+                <select name="ensino-basico" id="ensino-basico" required>
+                  <option select disable value="">Selecione uma resposta</option>
+                  <option value="PU">Escola Publica</option>
+                  <option value="PA">Escola Particular</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="trabalho">
+                Você trabalha? Em que?
+              </label>
+              <select name="trabalho" id="trabalho" required>
+                <option select disable value="">Selecione uma resposta</option>
+                <option value="NT">Não trabalho</option>
+                <option value="ECCA">Emprego com carteira assinada</option>
+                <option value="ESCA">Emprego sem carteira assinada</option>
+                <option value="FPM">Funcionário público/Militar</option>
+                <option value="CPAM">Conta própria/Autônomo/MEI</option>
+                <option value="EM">Empregador(a)</option>
+                <option value="EB">Estagiário/Bolsista</option>
+                <option value="O">Outro</option>
+              </select>
+
+            </div>
           </div>
-          <div class="input-wrapper">
-            <label for="horaF">Até</label>
-            <input type="time" name="horaF" id="horaF">
+
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>
+              Dia e Hora
+            </legend>
+            <div class="input-data">
+              <div class="input-wrapper">
+                <label for="data">Data</label>
+                <input type="date" name="data" id="data">
+              </div>
+              <div class="input-wrapper">
+                <label for="horaI">Das</label>
+                <input type="time" name="horaI" id="horaI">
+              </div>
+              <div class="input-wrapper">
+                <label for="horaF">Até</label>
+                <input type="time" name="horaF" id="horaF">
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </fieldset>
-    </form>
-    <footer>
-      <input form="form" type="submit" value="Enviar formulário" class="button">
-    </footer>
-  </main>
-</div>
+        </fieldset>
+      </form>
+      <footer>
+        <input form="form" type="submit" value="Enviar formulário" class="button">
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="form.js"></script>
 </body>
+
 </html>
