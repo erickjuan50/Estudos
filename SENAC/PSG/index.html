@@ -60,7 +60,12 @@
             <div class="input-wrapper">
               <label for="cellPhone">Celular</label>
               <input type="text" name="cellPhone" id="cellPhone" required
-              onkeyup="formatarCelTel(this)"qtd_trabalhadores>
+              onkeyup="formatarCelTel(this)">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="nacionality">Nacionalidade</label>
+              <input type="text" name="nacionality" id="nacionality" required>
             </div>
 
             <div class="input-wrapper">
@@ -273,6 +278,20 @@
                class="money-mask" placeholder="R$ 0,00">
             </div> 
 
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="termos-uso" id="termos-uso"
+               required>
+              <label for="termos-uso"><span>
+                Para continuar, você precisa aceitar os <a href="#" target="_blank">termos de uso.</a>
+              </span></label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="termos-servico" id="termos-servico" 
+              required>
+              <label for="termos-servico"><span>
+                Declaro que li e concordo com a <a href="#" target="_blank">política de privacidade. </a>
+              </span></label>
+            </div>
             </div>
           </div>
         </fieldset>

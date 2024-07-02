@@ -114,7 +114,7 @@ label span {
   line-height: 20px;
 }
 
-label span:hover {
+.input-wrapper label span:hover {
   color: #67656e;
 }
 
@@ -178,7 +178,7 @@ select {
   display: flex;
   align-items: center;
   margin: 0;
-  gap: 16px;
+  gap: 5px;
 }
 
 .checkbox-wrapper input {
@@ -192,6 +192,15 @@ select {
   height: 24px;
   border: 1px solid #E6E6F0;
   border-radius: 8px;
+}
+
+.checkbox-wrapper span{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.checkbox-wrapper span a{
+  text-decoration: none;
 }
 
 .checkbox-wrapper input:checked+label::before {
