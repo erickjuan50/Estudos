@@ -213,6 +213,20 @@
                 <option value="O">Outro</option>
               </select>
 
+              <div class="input-wrapper">
+                <label for="deficiencia">
+                  Possui alguma deficiencia? Se sim, qual?
+                </label>
+                <select name="deficiencia" id="deficiencia" required>
+                  <option select disable value="">Selecione uma resposta</option>
+                  <option value="N">Não</option>
+                  <option value="FM">Física/Motora</option>
+                  <option value="V">Visual</option>
+                  <option value="A">Auditiva</option>
+                  <option value="ME">Deficiência Psicossocial ou por Saúde Mental.</option>
+                  <option value="I">Intelectual</option>
+                  <option value="MU">Múltiplas</option>
+                </select>
             </div>
           </div>
 
@@ -221,21 +235,41 @@
         <fieldset>
           <div class="fieldset-wrapper">
             <legend>
-              Dia e Hora
+              Análise financeira
             </legend>
-            <div class="input-data">
-              <div class="input-wrapper">
-                <label for="data">Data</label>
-                <input type="date" name="data" id="data">
-              </div>
-              <div class="input-wrapper">
-                <label for="horaI">Das</label>
-                <input type="time" name="horaI" id="horaI">
-              </div>
-              <div class="input-wrapper">
-                <label for="horaF">Até</label>
-                <input type="time" name="horaF" id="horaF">
-              </div>
+            
+            <div class="input-wrapper">
+              <label for="qtd_moradores">
+                Quantas Pessoas de sua família, inclusive você, 
+                residem no domicílio?
+              </label>
+              <input type="number" name="qtd_moradores" id="qtd_moradores">
+            </div>  
+
+            <div class="input-wrapper">
+              <label for="qtd_moradores">
+                Quantas Pessoas de sua família, inclusive você,
+                residentes no domicílio, exercem atividade remunerada?
+              </label>
+              <input type="number" name="qtd_moradores" id="qtd_moradores">
+            </div>  
+
+            <div class="input-wrapper">
+              <label for="qtd_moradores">
+                Informe sua renda bruta pessoal
+              </label>
+              <input type="number" name="qtd_moradores" id="qtd_moradores">
+            </div> 
+
+            <div class="input-wrapper">
+              <label for="qtd_moradores">
+                A renda mensal familiar, ou seja, a soma do rendimento 
+                bruto de todas as pessoas da sua família, residentes no
+                domicílio, inclusive você, é de:
+              </label>
+              <input type="number" name="qtd_moradores" id="qtd_moradores">
+            </div> 
+
             </div>
           </div>
         </fieldset>
