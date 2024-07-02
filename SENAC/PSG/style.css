@@ -197,6 +197,7 @@ select {
 .checkbox-wrapper span{
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  color: #4E4958;
 }
 
 .checkbox-wrapper span a{
