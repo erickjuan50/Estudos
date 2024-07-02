@@ -59,7 +59,8 @@
             </div>
             <div class="input-wrapper">
               <label for="cellPhone">Celular</label>
-              <input type="text" name="cellPhone" id="cellPhone" required>
+              <input type="text" name="cellPhone" id="cellPhone" required
+              onkeyup="formatarCelTel(this)"qtd_trabalhadores>
             </div>
 
             <div class="input-wrapper">
@@ -247,27 +248,29 @@
             </div>  
 
             <div class="input-wrapper">
-              <label for="qtd_moradores">
+              <label for="qtd_trabalhadores">
                 Quantas Pessoas de sua família, inclusive você,
                 residentes no domicílio, exercem atividade remunerada?
               </label>
-              <input type="number" name="qtd_moradores" id="qtd_moradores">
+              <input type="number" name="qtd_trabalhadores" id="qtd_trabalhadores">
             </div>  
 
             <div class="input-wrapper">
-              <label for="qtd_moradores">
+              <label for="renda_bruta">
                 Informe sua renda bruta pessoal
               </label>
-              <input type="number" name="qtd_moradores" id="qtd_moradores">
+              <input type="text" name="renda_bruta" id="renda_bruta"
+               class="money-mask" placeholder="R$ 0,00">
             </div> 
 
             <div class="input-wrapper">
-              <label for="qtd_moradores">
+              <label for="renda_familiar">
                 A renda mensal familiar, ou seja, a soma do rendimento 
                 bruto de todas as pessoas da sua família, residentes no
                 domicílio, inclusive você, é de:
               </label>
-              <input type="number" name="qtd_moradores" id="qtd_moradores">
+              <input type="text" name="renda_familiar" id="renda_familiar"
+               class="money-mask" placeholder="R$ 0,00">
             </div> 
 
             </div>

@@ -220,6 +220,8 @@ select {
 footer {
   background-color: #F0F0F4;
   height: 136px;
+  width: 736px;
+  margin: 0 auto;
   border-radius: 0 0 8px 8px;
   display: flex;
   flex-direction: column;

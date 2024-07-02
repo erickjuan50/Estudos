@@ -75,3 +75,17 @@ function formatarCelTel(input) {
       input.value = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2, 7) + '-' + numeroTelefone.substring(7, 13);
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('.money-mask');
+    
+    inputs.forEach(input => {
+      input.addEventListener('input', function() {
+        let value = this.value.replace(/\D/g, '');
+        value = (value / 100).toFixed(2) + '';
+        value = value.replace('.', ',');
+        value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+        this.value = 'R$ ' + value;
+      });
+    });
+  });
