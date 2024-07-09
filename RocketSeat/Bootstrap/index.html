@@ -2,90 +2,222 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Teste Mainpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Teste Mainpage</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body">
-        <div class="container">
-          <div class="logo-content col-4">
-            <a class="navbar-brand" href="#"><img class="img-fluid" src="https://www.se.senac.br/wp-content/uploads/2023/11/marca-senac-sergipe-topo-marca-nova.png" alt=""></a>
-        </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul> 
-          </div>
-        </div>
-      </nav>
-<div class="">
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active c-item">
-            <img src="/RocketSeat/Bootstrap/img/banner-psg-layout.jpg" class="d-block c-img w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item c-item">
-            <img src="" class="d-block c-img w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item c-item">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWR1Y2F0aW9ufGVufDB8fDB8fHww." class="d-block c-img w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <nav class="navbar navbar-expand-lg bg-body navbar-light bg-light sticky-top">
+    <div class="container">
+      <div class="logo-content col-4 col-lg-2">
+        <a class="navbar-brand" href="#"><img class="img-fluid"
+            src="https://www.se.senac.br/wp-content/uploads/2023/11/marca-senac-sergipe-topo-marca-nova.png" alt=""></a>
       </div>
-</div>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sobre o PSG
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#about">Como funciona o PSG?</a></li>
+              <li><a class="dropdown-item" href="#rules">Regulamento</a></li>
+              <li><a class="dropdown-item" href="#calc">Como é feito o calculo?</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Cursos Disponíveis</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Resultados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="/RocketSeat/Bootstrap/img/banner-psg-layout.jpg" class="d-block c-img w-100" alt="...">
+          <div class="carousel-caption">
+            <h5>Bem vindo(a) ao PSG</h5>
+            <p>Conheça o programa de gratuidade do Senac</p>
+            <p><a href="" class="btn btn-warning mt-3">Leia Mais</a></p>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="" class="d-block c-img w-100" alt="...">
+          <div class="carousel-caption">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img
+            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWR1Y2F0aW9ufGVufDB8fDB8fHww."
+            class="d-block c-img w-100" alt="...">
+          <div class="carousel-caption">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Section Informações -->
+
+    <section id="about" class="about section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-12">
+            <div class="about-img">
+              <img
+                src="https://images.unsplash.com/photo-1605627079912-97c3810a11a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+                alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-3">
+            <div class="about-text">
+              <h2>Como funciona o PSG?</h2>
+              <p>Firmado em 22 de julho de 2008 entre o Ministério da Educação, o Ministério do Trabalho, o Ministério
+                da Fazenda, a Confederação Nacional do Comércio de Bens, Serviços e Turismo – CNC e o Senac, e
+                ratificado pelo Decreto nº 6.633, de 5 de novembro de 2008 , o Programa Senac de Gratuidade – PSG tem
+                por objetivo garantir o acesso à educação profissional de qualidade para pessoas cuja renda familiar
+                mensal per capita não ultrapasse dois salários mínimos.
+                Pelo acordo celebrado, o Senac investe, desde 2014, 66,67% de sua Receita Líquida de Contribuição nesse
+                importante programa de educação inclusiva.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="about section-padding">
+      <div class="container">
+        <div class="row d-md-flex flex-row-reverse">
+          <div class="col-lg-4 col-md-12 col-12">
+            <div class="about-img">
+              <img
+                src="https://images.unsplash.com/photo-1509869175650-a1d97972541a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+                alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-3">
+            <div class="about-text">
+              <h2>Regulamento</h2>
+              <p>Conheça as formas de divulgação, inscrição e matrícula no PSG, tipos da oferta de educação
+                profissional, metodologia do cálculo do gasto médio aluno/hora-aula, contabilização da gratuidade,
+                regras para elaboração do plano de aplicação e retificativo, formas de registro dos dados da produção e
+                indicadores utilizados no processo de avaliação das pesquisas.</p>
+              <p>Clique no botão abaixo para ler mais sobre as diretrizes.</p>
+              <a href="#" class="btn btn-warning">Leia mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calc" class="about section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-12">
+            <h2>Como é feito o calculo?</h2>
+            <div class="about-img">
+              <img src="https://www.se.senac.br/psg/wp-content/uploads/2023/08/psg-ver4-715x1024.jpg" alt=""
+                class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-3">
+            <div class="about-text mt-4">
+              <h5>Gasto Total Líquido por tipo de ensino e curso</h2>
+                <p>O gasto total líquido é o somatório das despesas correntes executadas no período (deduzidas os
+                  encargos regulamentares, como a retenção da Secretaria da Receita Federal e a contribuição ao sistema
+                  confederativo do Comércio, responsável pela administração superior do Senac) e as despesas de capital,
+                  ou seja, investimentos feitos no mesmo período.</p>
+                <h5>Carga Horária Efetiva por tipo de ensino e curso</h5>
+                <p>Chamamos de Carga Horária Efetiva(CHE) a quantidade de horas-aulas ministradas por aluno nos tipos de
+                  ensino e curso. Apenas no caso do tipo de curso Aprendizagem Profissional (qualificação ou habilitação
+                  técnica), para fins de cálculo da CHE, são consideradas as horas gastas na formação educacional mais
+                  100 horas da prática profissional na empresa. Quando a prática ocorrer em ambientes laboratoriais sob
+                  a responsabilidade do Senac deverá considerar, para fins de cálculo, a carga horária total do curso,
+                  isto é, carga horária no Senac e na empresa.</p>
+                <h5>Atualização da Oferta</h5>
+                <p>Para fins de planejamento da Oferta, o compromisso financeiro com a gratuidade é convertido em carga
+                  horária, dado o valor do GMAHA por tipo de ensino e tipo de curso. A previsão da oferta se dá em dois
+                  momentos: Plano de Aplicação e Retificativo Plano de Aplicação. Além disso, os Departamentos Regionais
+                  ofertantes realizam, mensalmente, o acompanhamento das horas-aulas e executadas no âmbito do Programa
+                  Senac de Gratuidade, permitindo o acompanhamento da oferta e o cumprimento do compromisso financeiro
+                  de investir 66,67% da Receita de Contribuição Social Líquida, mais 100% das subvenções aplicadas pelos
+                  Departamentos Regionais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+            <h5 class="text-uppercase mb-4 fw-bold text-warning">Senac</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, dolore? Facere distinctio illo dicta neque
+              et hic eaque dolores dolore voluptatum nihil soluta, fugit illum inventore beatae delectus ab officiis
+              nisi! Dolores omnis numquam minima adipisci quae! Officia eius voluptates aperiam ipsum, fugit
+              dignissimos, possimus et voluptate excepturi, accusamus eveniet.</p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 fw-bold text-warning">
+              Products
+            </h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa reiciendis et blanditiis perspiciatis
+              quaerat aperiam qui ullam, ipsam quis? Necessitatibus pariatur quam labore incidunt quasi consectetur
+              excepturi iusto earum nesciunt ratione modi nisi ipsam perferendis dolor, numquam, assumenda maxime
+              explicabo voluptate quisquam ullam vel rem, quo delectus. Adipisci, fuga amet.</p>
+          </div>
+
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 fw-bold text-warning">
+              Links Úteis
+            </h5>
+            <a href="https://www.se.senac.br/">Senac Oficial</a>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
