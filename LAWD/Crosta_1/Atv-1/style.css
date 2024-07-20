@@ -1,0 +1,108 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #351941;
+  color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #211a24;
+  border-radius: 20px;
+  padding: 0 20px 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.nav-brand img {
+  width: 100px;
+}
+
+.nav-itens ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-itens ul a {
+  text-decoration: none;
+  padding: 20px;
+  color: #f8f9fa
+}
+
+.wrapper {
+  max-width: 992px;
+  min-width: 992px;
+  margin: 0 auto;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+.bg-dark {
+  background-color: #211a24;
+}
+.icon {
+  font-size: 50px;
+  color: #17a2b8;
+  transition: color 0.3s;
+}
+.icon:hover {
+  color: #ffc107;
+}
+.step-title {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.step-description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.col {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  flex: 1;
+  max-width: 30%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #444;
+  border-radius: 10px;
+  transition: transform 0.3s, background 0.3s;
+}
+.col:hover {
+  transform: translateY(-10px);
+  background: #555;
+}
+.col h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.col p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+h1.display-4, h2.display-5 {
+
+  background-image: linear-gradient(to right top, #331a59, #4a1f81, #6520ab, #841bd5, #a600ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media(max-width: 768px) {
+  .col {
+      max-width: 100%;
+  }
+}
