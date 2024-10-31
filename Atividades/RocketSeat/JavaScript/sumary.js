@@ -6,6 +6,7 @@ console.log("Hello World");
 //Strings
   console.log("string normal");
   console.log('string normal');
+  //template String ` `
   console.log(`String 
               "Multilinha" que permite expressões como ${1+1}`);
 

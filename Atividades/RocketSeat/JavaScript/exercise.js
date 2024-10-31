@@ -13,7 +13,7 @@ let student = {
   isSubscribed: false
 }
 let student2 = {
-  name: "lidia",
+  name: "juan",
   age: 20,
   weight:65.2,
   isSubscribed: true
