@@ -8,7 +8,7 @@ f e c k b x a k
 u a k w o i
 m a i d o m m q y
 
-
+Tabela ascii 97...
 
 
 Palavra Chave: T A R K O V
