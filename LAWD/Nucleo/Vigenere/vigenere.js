@@ -1,8 +1,5 @@
 //Converte um caractere para seu valor ASCII baseado na posição do alfabeto (a=0, b=1, ..., z=25)
-function asciiCode(char){
-    let asciiCode = (char.toLowerCase()).charCodeAt(0) - 97; //Converte para minúscula (pois a tabela ascii diferencia maiusculas de minusculas) e ajusta para a posição
-    return asciiCode;
-}
+
 
 //Converte um valor numérico (0-25) de volta para um caractere
 function asciiChar(code){
