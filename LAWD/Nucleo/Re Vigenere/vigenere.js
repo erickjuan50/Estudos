@@ -87,6 +87,73 @@ class CryptVigenere {
 }
 
 
+async function decryptMessage() {
+    try {
+        const response = await fetch("https://desafio9.onrender.com/decrypt_message", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        // Verifica a resposta da requisição
+        if (response.ok) {
+            const jsonResponse = await response.json();
+            console.log("Mensagem Descriptografada:", jsonResponse.decrypted_message);
+        } else if (response.status === 400) {
+            const errorResponse = await response.json();
+            console.log("Erro:", errorResponse.error);
+        }
+    } catch (error) {
+        console.error("Erro na requisição:", error);
+    }
+}
+
+// Chama a função para descriptografar a mensagem
+// decryptMessage(); // Não precisa do console.log aqui, pois a função já faz a impressão (essa nota é eu não esquecer...)
+
+// Envia uma requisição POST para descriptografar uma mensagem usando o endpoint
+async function decryptMessage(encryptedText, key) {
+    const data = {
+        "encrypted_message": encryptedText,
+        "keyword": key
+    };
+
+    try {
+        const response = await fetch("https://desafio9.onrender.com/decrypt_message", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            const jsonResponse = await response.json();
+            document.getElementById("original").value = jsonResponse.decrypted_message;
+        } else if (response.status === 400) {
+            const errorResponse = await response.json();
+            alert("Erro: " + errorResponse.error);
+        }
+    } catch (error) {
+        console.error("Erro na requisição:", error);
+    }
+}
+
+// Função acionada ao clicar no botão "Criptografar"
+document.getElementById("encryptButton").addEventListener("click", function() {
+    const originalText = document.getElementById("original").value;
+    const key = document.getElementById("key").value;
+    document.getElementById("encrypted").value = CryptVigenere.encryptWord(originalText, key);
+});
+
+// Função acionada ao clicar no botão "Descriptografar"
+document.getElementById("decryptButton").addEventListener("click", function() {
+    const encryptedText = document.getElementById("encrypted").value;
+    const key = document.getElementById("key").value;
+    decryptMessage(encryptedText, key);
+});
 
 
 
@@ -94,5 +161,3 @@ class CryptVigenere {
 
 
 
-
-console.log(CryptVigenere.encryptWord('c', 'b'))
