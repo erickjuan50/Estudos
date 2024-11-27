@@ -161,3 +161,4 @@ document.getElementById("decryptButton").addEventListener("click", function() {
 
 
 
+CryptVigenere.encryptWord()
