@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Básico DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Bem-vindo ao Workshop de DOM!</h1>
+    <button id="mudarTexto">Clique para mudar o título</button>
+
+    <script>
+        const botao = document.getElementById('mudarTexto');
+        const titulo = document.getElementById('titulo');
+
+        botao.addEventListener('click', () => {
+            titulo.textContent = 'Você mudou o título!';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos no DOM</title>
+</head>
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <form id="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="mensagem"></div>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        const mensagem = document.getElementById('mensagem');
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            mensagem.textContent = `Olá, ${nome}! Seu cadastro foi realizado com sucesso.`;
+        });
+    </script>
+</body>
+</html>

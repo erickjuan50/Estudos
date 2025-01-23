@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação Avançada do DOM</title>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <button id="adicionar">Adicionar Tarefa</button>
+    <button id="remover">Remover Última Tarefa</button>
+    <ul id="lista"></ul>
+
+    <script>
+        const lista = document.getElementById('lista');
+        const botaoAdicionar = document.getElementById('adicionar');
+        const botaoRemover = document.getElementById('remover');
+
+        botaoAdicionar.addEventListener('click', () => {
+            const novaTarefa = document.createElement('li');
+            novaTarefa.textContent = `Tarefa ${lista.children.length + 1}`;
+            lista.appendChild(novaTarefa);
+        });
+
+        botaoRemover.addEventListener('click', () => {
+            if (lista.lastChild) {
+                lista.removeChild(lista.lastChild);
+            }
+        });
+    </script>
+</body>
+</html>
