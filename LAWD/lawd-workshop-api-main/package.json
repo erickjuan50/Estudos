@@ -1,0 +1,15 @@
+{
+  "name": "lawd-api",
+  "version": "1.0.0",
+  "description": "API para workshop de desenvolvimento em Node.js",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lawd",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
+}

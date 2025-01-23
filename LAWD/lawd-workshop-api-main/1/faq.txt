@@ -1,0 +1,2 @@
+- Usar API pública JSONPlaceholder
+- Fazer uma requisição para obter os 10 primeiros posts, exibindo o título de cada um em uma lista

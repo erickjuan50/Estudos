@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarefa 2</title>
+</head>
+<body>
+    <h1>oiiiii sapecaooo</h1>
+    <button id="btn">Atualizar</button>
+    <div id="results"></div>
+
+    <script>
+
+        const btn = document.getElementById('btn');
+        const resultsContainer = document.getElementById('results');
+
+        async function fetchAndDisplayData() {
+            const response = await fetch("https://randomuser.me/api/?results=10");
+            const data = await response.json()
+            resultsContainer.innerHTML = '';
+            data.results.forEach(user => {
+                const postElement = document.createElement('div');
+                    resultsContainer.innerHTML = `
+                        <img src="${user.picture.medium}" alt="Foto de ${user.name.first}" style="border-radius: 50%; width: 50px; height: 50px;">
+                        <h3>${user.name.first} ${user.name.last}</h3>
+                        <p>Email: ${user.email}</p>
+                        <p>Gênero: ${user.gender}</p>
+                        <hr>
+                    `;
+                resultsContainer.appendChild(postElement);
+            });
+        }
+
+
+        btn.addEventListener('click', fetchAndDisplayData)
+    </script>
+</body>
+</html>
